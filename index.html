@@ -5,50 +5,217 @@
 <span class="hljs-tag"><<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>></span>
 <span class="hljs-tag"><<span class="hljs-name">title</span>></span>지승세무회계 | 세무는 신고가 아니라 전략입니다<span class="hljs-tag"></<span class="hljs-name">title</span>></span>
 <span class="hljs-tag"><<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>></span>
-<span class="hljs-tag"><<span class="hljs-name">style</span>></span><span class="language-css">
-*{<span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>;<span class="hljs-attribute">box-sizing</span>:border-box}
-<span class="hljs-selector-tag">html</span>{<span class="hljs-attribute">scroll-behavior</span>:smooth}
-<span class="hljs-selector-tag">body</span>{<span class="hljs-attribute">font-family</span>:<span class="hljs-string">&#x27;Noto Sans KR&#x27;</span>,sans-serif;<span class="hljs-attribute">color</span>:<span class="hljs-number">#333</span>;<span class="hljs-attribute">line-height</span>:<span class="hljs-number">1.7</span>}
-<span class="hljs-selector-pseudo">:root</span>{<span class="hljs-attr">--navy</span>:<span class="hljs-number">#1a2e4a</span>;<span class="hljs-attr">--gold</span>:<span class="hljs-number">#b8963e</span>;<span class="hljs-attr">--light</span>:<span class="hljs-number">#f8f9fb</span>}
-<span class="hljs-selector-tag">header</span>{<span class="hljs-attribute">position</span>:fixed;<span class="hljs-attribute">top</span>:<span class="hljs-number">0</span>;<span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;<span class="hljs-attribute">background</span>:<span class="hljs-number">#fff</span>;<span class="hljs-attribute">box-shadow</span>:<span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">12px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,.<span class="hljs-number">08</span>);<span class="hljs-attribute">z-index</span>:<span class="hljs-number">1000</span>}
-<span class="hljs-selector-class">.nav-inner</span>{<span class="hljs-attribute">max-width</span>:<span class="hljs-number">1100px</span>;<span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> auto;<span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span> <span class="hljs-number">24px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">70px</span>;<span class="hljs-attribute">display</span>:flex;<span class="hljs-attribute">align-items</span>:center;<span class="hljs-attribute">justify-content</span>:space-between}
-<span class="hljs-selector-class">.logo</span> <span class="hljs-selector-tag">img</span>{<span class="hljs-attribute">height</span>:<span class="hljs-number">44px</span>;<span class="hljs-attribute">object-fit</span>:contain}
-<span class="hljs-selector-tag">nav</span>{<span class="hljs-attribute">display</span>:flex}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">a</span>{<span class="hljs-attribute">margin-left</span>:<span class="hljs-number">28px</span>;<span class="hljs-attribute">text-decoration</span>:none;<span class="hljs-attribute">color</span>:<span class="hljs-number">#444</span>;<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">92rem</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">500</span>;<span class="hljs-attribute">transition</span>:color .<span class="hljs-number">2s</span>}
-<span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>{<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--gold)}
-<span class="hljs-selector-class">.hamburger</span>{<span class="hljs-attribute">display</span>:none;<span class="hljs-attribute">flex-direction</span>:column;<span class="hljs-attribute">gap</span>:<span class="hljs-number">5px</span>;<span class="hljs-attribute">cursor</span>:pointer;<span class="hljs-attribute">background</span>:none;<span class="hljs-attribute">border</span>:none;<span class="hljs-attribute">padding</span>:<span class="hljs-number">4px</span>}
-<span class="hljs-selector-class">.hamburger</span> <span class="hljs-selector-tag">span</span>{<span class="hljs-attribute">display</span>:block;<span class="hljs-attribute">width</span>:<span class="hljs-number">24px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">2px</span>;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">var</span>(--navy)}
-<span class="hljs-selector-class">.mobile-menu</span>{<span class="hljs-attribute">display</span>:none;<span class="hljs-attribute">flex-direction</span>:column;<span class="hljs-attribute">background</span>:<span class="hljs-number">#fff</span>;<span class="hljs-attribute">border-top</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#eee</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">16px</span> <span class="hljs-number">24px</span>}
-<span class="hljs-selector-class">.mobile-menu</span><span class="hljs-selector-class">.open</span>{<span class="hljs-attribute">display</span>:flex}
-<span class="hljs-selector-class">.mobile-menu</span> <span class="hljs-selector-tag">a</span>{<span class="hljs-attribute">padding</span>:<span class="hljs-number">12px</span> <span class="hljs-number">0</span>;<span class="hljs-attribute">border-bottom</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#f0f0f0</span>;<span class="hljs-attribute">text-decoration</span>:none;<span class="hljs-attribute">color</span>:<span class="hljs-number">#333</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">500</span>}
-<span class="hljs-selector-id">#home</span>{<span class="hljs-attribute">min-height</span>:<span class="hljs-number">100vh</span>;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">linear-gradient</span>(<span class="hljs-number">135deg</span>,<span class="hljs-number">#0d1f35</span> <span class="hljs-number">0%</span>,<span class="hljs-number">#1a2e4a</span> <span class="hljs-number">50%</span>,<span class="hljs-number">#1e3a5f</span> <span class="hljs-number">100%</span>);<span class="hljs-attribute">display</span>:flex;<span class="hljs-attribute">align-items</span>:center;<span class="hljs-attribute">justify-content</span>:center;<span class="hljs-attribute">text-align</span>:center;<span class="hljs-attribute">padding</span>:<span class="hljs-number">100px</span> <span class="hljs-number">24px</span> <span class="hljs-number">60px</span>}
-<span class="hljs-selector-class">.hero-inner</span>{<span class="hljs-attribute">max-width</span>:<span class="hljs-number">800px</span>}
-<span class="hljs-selector-class">.hero-badge</span>{<span class="hljs-attribute">display</span>:inline-block;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">rgba</span>(<span class="hljs-number">184</span>,<span class="hljs-number">150</span>,<span class="hljs-number">62</span>,.<span class="hljs-number">2</span>);<span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">82rem</span>;<span class="hljs-attribute">letter-spacing</span>:<span class="hljs-number">2px</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">6px</span> <span class="hljs-number">18px</span>;<span class="hljs-attribute">border-radius</span>:<span class="hljs-number">20px</span>;<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">32px</span>}
-<span class="hljs-selector-class">.hero-title</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-built_in">clamp</span>(<span class="hljs-number">2rem</span>,<span class="hljs-number">5vw</span>,<span class="hljs-number">3.2rem</span>);<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">900</span>;<span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>;<span class="hljs-attribute">line-height</span>:<span class="hljs-number">1.3</span>;<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">20px</span>;<span class="hljs-attribute">word-break</span>:keep-all}
-<span class="hljs-selector-class">.hero-sub</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-built_in">clamp</span>(<span class="hljs-number">1rem</span>,<span class="hljs-number">2vw</span>,<span class="hljs-number">1.15rem</span>);<span class="hljs-attribute">color</span>:<span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,<span class="hljs-number">255</span>,.<span class="hljs-number">75</span>);<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">40px</span>;<span class="hljs-attribute">word-break</span>:keep-all}
-<span class="hljs-selector-class">.btn-gold</span>{<span class="hljs-attribute">display</span>:inline-block;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">16px</span> <span class="hljs-number">40px</span>;<span class="hljs-attribute">border-radius</span>:<span class="hljs-number">4px</span>;<span class="hljs-attribute">text-decoration</span>:none;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">700</span>;<span class="hljs-attribute">font-size</span>:<span class="hljs-number">1rem</span>;<span class="hljs-attribute">transition</span>:background .<span class="hljs-number">2s</span>,transform .<span class="hljs-number">2s</span>}
-<span class="hljs-selector-class">.btn-gold</span><span class="hljs-selector-pseudo">:hover</span>{<span class="hljs-attribute">background</span>:<span class="hljs-number">#9a7c2e</span>;<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(-<span class="hljs-number">2px</span>)}
-<span class="hljs-selector-tag">section</span>{<span class="hljs-attribute">padding</span>:<span class="hljs-number">80px</span> <span class="hljs-number">24px</span>}
-<span class="hljs-selector-class">.section-inner</span>{<span class="hljs-attribute">max-width</span>:<span class="hljs-number">1100px</span>;<span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> auto}
-<span class="hljs-selector-class">.section-label</span>{<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">8rem</span>;<span class="hljs-attribute">letter-spacing</span>:<span class="hljs-number">3px</span>;<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">600</span>;<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">10px</span>}
-<span class="hljs-selector-class">.section-title</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-built_in">clamp</span>(<span class="hljs-number">1.6rem</span>,<span class="hljs-number">3vw</span>,<span class="hljs-number">2.2rem</span>);<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">800</span>;<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--navy);<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">14px</span>;<span class="hljs-attribute">word-break</span>:keep-all}
-<span class="hljs-selector-class">.divider</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">48px</span>;<span class="hljs-attribute">height</span>:<span class="hljs-number">3px</span>;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">44px</span>}
-<span class="hljs-selector-id">#services</span>{<span class="hljs-attribute">background</span>:<span class="hljs-built_in">var</span>(--light)}
-<span class="hljs-selector-class">.cards</span>{<span class="hljs-attribute">display</span>:grid;<span class="hljs-attribute">grid-template-columns</span>:<span class="hljs-built_in">repeat</span>(auto-fit,<span class="hljs-built_in">minmax</span>(<span class="hljs-number">280px</span>,<span class="hljs-number">1</span>fr));<span class="hljs-attribute">gap</span>:<span class="hljs-number">28px</span>}
-<span class="hljs-selector-class">.card</span>{<span class="hljs-attribute">background</span>:<span class="hljs-number">#fff</span>;<span class="hljs-attribute">border-radius</span>:<span class="hljs-number">8px</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">36px</span> <span class="hljs-number">28px</span>;<span class="hljs-attribute">box-shadow</span>:<span class="hljs-number">0</span> <span class="hljs-number">4px</span> <span class="hljs-number">20px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,.<span class="hljs-number">06</span>);<span class="hljs-attribute">border-top</span>:<span class="hljs-number">4px</span> solid <span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">transition</span>:transform .<span class="hljs-number">2s</span>,box-shadow .<span class="hljs-number">2s</span>}
-<span class="hljs-selector-class">.card</span><span class="hljs-selector-pseudo">:hover</span>{<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(-<span class="hljs-number">6px</span>);<span class="hljs-attribute">box-shadow</span>:<span class="hljs-number">0</span> <span class="hljs-number">12px</span> <span class="hljs-number">32px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,.<span class="hljs-number">1</span>)}
-<span class="hljs-selector-class">.card-icon</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-number">2.4rem</span>;<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">16px</span>}
-<span class="hljs-selector-class">.card</span> <span class="hljs-selector-tag">h3</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-number">1.1rem</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">700</span>;<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--navy);<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">10px</span>}
-<span class="hljs-selector-class">.card</span> <span class="hljs-selector-tag">p</span>{<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">9rem</span>;<span class="hljs-attribute">color</span>:<span class="hljs-number">#666</span>;<span class="hljs-attribute">line-height</span>:<span class="hljs-number">1.8</span>}
-<span class="hljs-selector-id">#about</span>{<span class="hljs-attribute">background</span>:<span class="hljs-number">#fff</span>}
-<span class="hljs-selector-class">.about-grid</span>{<span class="hljs-attribute">display</span>:grid;<span class="hljs-attribute">grid-template-columns</span>:<span class="hljs-number">280px</span> <span class="hljs-number">1</span>fr;<span class="hljs-attribute">gap</span>:<span class="hljs-number">56px</span>;<span class="hljs-attribute">align-items</span>:start}
-<span class="hljs-selector-class">.profile-placeholder</span>{<span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;<span class="hljs-attribute">aspect-ratio</span>:<span class="hljs-number">3</span>/<span class="hljs-number">4</span>;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">linear-gradient</span>(<span class="hljs-number">135deg</span>,<span class="hljs-number">#dce4ef</span>,<span class="hljs-number">#b8c8dc</span>);<span class="hljs-attribute">border-radius</span>:<span class="hljs-number">8px</span>;<span class="hljs-attribute">display</span>:flex;<span class="hljs-attribute">flex-direction</span>:column;<span class="hljs-attribute">align-items</span>:center;<span class="hljs-attribute">justify-content</span>:center;<span class="hljs-attribute">color</span>:<span class="hljs-number">#4a6a8a</span>;<span class="hljs-attribute">gap</span>:<span class="hljs-number">10px</span>}
-<span class="hljs-selector-class">.profile-placeholder</span> <span class="hljs-selector-class">.pi</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-number">4rem</span>}
-<span class="hljs-selector-class">.profile-placeholder</span> <span class="hljs-selector-tag">p</span>{<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">82rem</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">500</span>}
-<span class="hljs-selector-class">.about-name</span>{<span class="hljs-attribute">font-size</span>:<span class="hljs-number">1.6rem</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">800</span>;<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--navy);<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">6px</span>}
-<span class="hljs-selector-class">.about-badge</span>{<span class="hljs-attribute">display</span>:inline-block;<span class="hljs-attribute">background</span>:<span class="hljs-built_in">var</span>(--gold);<span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>;<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">78rem</span>;<span class="hljs-attribute">padding</span>:<span class="hljs-number">3px</span> <span class="hljs-number">14px</span>;<span class="hljs-attribute">border-radius</span>:<span class="hljs-number">20px</span>;<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">24px</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">600</span>}
-<span class="hljs-selector-class">.about-text</span> <span class="hljs-selector-tag">p</span>{<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">93rem</span>;<span class="hljs-attribute">color</span>:<span class="hljs-number">#444</span>;<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">14px</span>;<span class="hljs-attribute">line-height</span>:<span class="hljs-number">1.95</span>;<span class="hljs-attribute">word-break</span>:keep-all}
-<span class="hljs-selector-class">.career-box</span>{<span class="hljs-attribute">margin-top</span>:<span class="hljs-number">28px</span>;<span class="hljs-attribute">border-top</span>:<span class="hljs-number">2px</span> solid <span class="hljs-built_in">var</span>(--light);<span class="hljs-attribute">padding-top</span>:<span class="hljs-number">24px</span>}
-<span class="hljs-selector-class">.career-box</span> <span class="hljs-selector-tag">h4</span>{<span class="hljs-attribute">font-size</span>:.<span class="hljs-number">95rem</span>;<span class="hljs-attribute">font-weight</span>:<span class="hljs-number">700</span>;<span class="hljs-attribute">color</span>:<span class="hljs-built_in">var</span>(--navy);<span class="hljs-attribute">margin-bottom</span>:<span class="hljs-number">14px</span>}
-<span class="hljs-selector-class">.career-box</span> <span class="hljs-selector-tag">ul</span>{<span class="hljs-attribute">list-style</span>:none;<span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>}
-<span class="hljs-selector-class">.career-box</span> <span class="hljs-selector-tag">li</span>{<span class="hljs-attribute">font-size</span></span>
+<span class="hljs-tag"><<span class="hljs-name">style</span>></span>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:&#x27;Noto Sans KR&#x27;,sans-serif;color:#333;line-height:1.7}
+:root{--navy:#1a2e4a;--gold:#b8963e;--light:#f8f9fb}
+header{position:fixed;top:0;width:100%;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);z-index:1000}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo img{height:44px;object-fit:contain}
+nav a{margin-left:28px;text-decoration:none;color:#444;font-size:.92rem;font-weight:500;transition:color .2s}
+nav a:hover{color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--navy)}
+.mobile-menu{display:none;flex-direction:column;background:#fff;border-top:1px solid #eee;padding:16px 24px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:12px 0;border-bottom:1px solid #f0f0f0;text-decoration:none;color:#333;font-weight:500}
+#home{min-height:100vh;background:linear-gradient(135deg,#0d1f35 0%,#1a2e4a 50%,#1e3a5f 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px}
+.hero-inner{max-width:800px}
+.hero-badge{display:inline-block;background:rgba(184,150,62,.15);border:1px solid var(--gold);color:var(--gold);font-size:.82rem;letter-spacing:2px;padding:6px 18px;border-radius:20px;margin-bottom:32px}
+.hero-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.3;margin-bottom:20px;word-break:keep-all}
+.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.75);margin-bottom:40px;word-break:keep-all}
+.btn-gold{display:inline-block;background:var(--gold);color:#fff;padding:16px 40px;border-radius:4px;text-decoration:none;font-weight:700;font-size:1rem;transition:background .2s,transform .2s}
+.btn-gold:hover{background:#9a7c2e;transform:translateY(-2px)}
+section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:.8rem;letter-spacing:3px;color:var(--gold);font-weight:600;margin-bottom:10px}
+.section-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--navy);margin-bottom:14px;word-break:keep-all}
+.divider{width:48px;height:3px;background:var(--gold);margin-bottom:44px}
+#services{background:var(--light)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.card{background:#fff;border-radius:8px;padding:36px 28px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid var(--gold);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.card-icon{font-size:2.4rem;margin-bottom:16px}
+.card h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.card p{font-size:.9rem;color:#666;line-height:1.8}
+#about{background:#fff}
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start}
+.profile-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,#dce4ef,#b8c8dc);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4a6a8a;gap:10px}
+.profile-placeholder .pi{font-size:4rem}
+.profile-placeholder p{font-size:.82rem;font-weight:500}
+.about-name{font-size:1.6rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+.about-badge{display:inline-block;background:var(--gold);color:#fff;font-size:.78rem;padding:3px 14px;border-radius:20px;margin-bottom:24px;font-weight:600}
+.about-text p{font-size:.93rem;color:#444;margin-bottom:14px;line-height:1.95;word-break:keep-all}
+.career-box{margin-top:28px;border-top:2px solid var(--light);padding-top:24px}
+.career-box h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:14px;letter-spacing:.5px}
+.career-box ul{list-style:none;padding:0}
+.career-box li{font-size:.88rem;color:#555;padding:6px 0;border-bottom:1px solid #f0f0f0;padding-left:14px;position:relative}
+.career-box li::before{content:"·";position:absolute;left:0;color:var(--gold);font-weight:700}
+#location{background:var(--light)}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.map-wrap{border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.map-wrap iframe{display:block}
+.location-info{padding:8px 0}
+.location-info h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:20px}
+.info-row{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+.info-icon{font-size:1.2rem;min-width:24px;margin-top:2px}
+.info-text{font-size:.92rem;color:#444;line-height:1.7}
+.info-text strong{color:var(--navy);font-weight:600}
+#contact{background:#fff}
+.contact-form{max-width:640px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.88rem;font-weight:600;color:var(--navy);margin-bottom:7px}
+.form-group input,.form-group textarea{width:100%;padding:13px 16px;border:1.5px solid #ddd;border-radius:6px;font-family:inherit;font-size:.93rem;color:#333;transition:border-color .2s;outline:none}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{height:140px;resize:vertical}
+.btn-submit{background:var(--navy);color:#fff;padding:15px 48px;border:none;border-radius:4px;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s}
+.btn-submit:hover{background:#0d1f35}
+footer{background:#0d1f35;color:rgba(255,255,255,.65);padding:40px 24px;text-align:center}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-logo{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:12px}
+.footer-info{font-size:.82rem;line-height:2}
+.footer-copy{margin-top:16px;font-size:.78rem;color:rgba(255,255,255,.35)}
+@media(max-width:768px){
+nav{display:none}
+.hamburger{display:flex}
+.about-grid{grid-template-columns:1fr}
+.location-grid{grid-template-columns:1fr}
+.profile-placeholder{aspect-ratio:1/1;max-width:240px;margin:0 auto}
+}
+<span class="hljs-tag"></<span class="hljs-name">style</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">head</span>></span>
+<span class="hljs-tag"><<span class="hljs-name">body</span>></span>
+
+<span class="hljs-tag"><<span class="hljs-name">header</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-inner"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"logo"</span>></span><span class="hljs-tag"><<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/logo.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"지승세무회계 로고"</span> <span class="hljs-attr">onerror</span>=<span class="hljs-string">"this.style.display=&#x27;none&#x27;;this.nextElementSibling.style.display=&#x27;block&#x27;"</span>></span><span class="hljs-tag"><<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:none;font-size:1.1rem;font-weight:800;color:#1a2e4a"</span>></span>지승세무회계<span class="hljs-tag"></<span class="hljs-name">span</span>></span><span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">nav</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span>></span>홈<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#about"</span>></span>대표소개<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#services"</span>></span>서비스<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#location"</span>></span>오시는길<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span>></span>상담문의<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+    <span class="hljs-tag"></<span class="hljs-name">nav</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hamburger"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"document.querySelector(&#x27;.mobile-menu&#x27;).classList.toggle(&#x27;open&#x27;)"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">span</span>></span><span class="hljs-tag"></<span class="hljs-name">span</span>></span><span class="hljs-tag"><<span class="hljs-name">span</span>></span><span class="hljs-tag"></<span class="hljs-name">span</span>></span><span class="hljs-tag"><<span class="hljs-name">span</span>></span><span class="hljs-tag"></<span class="hljs-name">span</span>></span>
+    <span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mobile-menu"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#home"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"this.closest(&#x27;.mobile-menu&#x27;).classList.remove(&#x27;open&#x27;)"</span>></span>홈<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#about"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"this.closest(&#x27;.mobile-menu&#x27;).classList.remove(&#x27;open&#x27;)"</span>></span>대표소개<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#services"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"this.closest(&#x27;.mobile-menu&#x27;).classList.remove(&#x27;open&#x27;)"</span>></span>서비스<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#location"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"this.closest(&#x27;.mobile-menu&#x27;).classList.remove(&#x27;open&#x27;)"</span>></span>오시는길<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"this.closest(&#x27;.mobile-menu&#x27;).classList.remove(&#x27;open&#x27;)"</span>></span>상담문의<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">header</span>></span>
+
+<span class="hljs-tag"><<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"home"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hero-inner"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hero-badge"</span>></span>JISEUNG TAX ACCOUNTING<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hero-title"</span>></span>세무는 신고가 아니라<span class="hljs-tag"><<span class="hljs-name">br</span>></span>전략입니다.<span class="hljs-tag"></<span class="hljs-name">h1</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hero-sub"</span>></span>지승세무회계는 법인 세무조정과 기업 구조를 이해하는 전문가입니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-gold"</span>></span>상담 문의하기<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">section</span>></span>
+
+<span class="hljs-tag"><<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"services"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-inner"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-label"</span>></span>SERVICES<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-title"</span>></span>주요 서비스<span class="hljs-tag"></<span class="hljs-name">h2</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider"</span>></span><span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"cards"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-icon"</span>></span>🏢<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">h3</span>></span>법인 세무조정<span class="hljs-tag"></<span class="hljs-name">h3</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>법인의 결산 및 세무조정 업무를 정확하고 책임감 있게 처리합니다. 기업 구조와 거래 흐름을 깊이 이해한 전문가가 직접 담당합니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-icon"</span>></span>🌐<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">h3</span>></span>수출입 세무자문<span class="hljs-tag"></<span class="hljs-name">h3</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>국제통상 전공 배경을 바탕으로 수출입 기업의 세무 이슈를 전문적으로 자문합니다. 관세·부가세·이전가격 등 다양한 분야를 지원합니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"card-icon"</span>></span>📊<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">h3</span>></span>중소·중견 기장대행<span class="hljs-tag"></<span class="hljs-name">h3</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>중소·중견 기업의 정기 세무대행 및 아웃소싱 업무를 안정적으로 수행합니다. 세무 이슈 발생 시 신속하게 대응합니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">section</span>></span>
+
+<span class="hljs-tag"><<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"about"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-inner"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-label"</span>></span>ABOUT<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-title"</span>></span>대표 소개<span class="hljs-tag"></<span class="hljs-name">h2</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider"</span>></span><span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"about-grid"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"profile-box"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"profile-placeholder"</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pi"</span>></span>👤<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">p</span>></span>대표세무사 김지현<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"about-text"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"about-name"</span>></span>김지현<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"about-badge"</span>></span>대표세무사<span class="hljs-tag"></<span class="hljs-name">span</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>안녕하십니까. 지승세무회계 대표세무사 김지현입니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>지난 15년간 법인 세무조정, 수출입업 관련 세무자문, 중소 중견 기업 아웃소싱 업무를 중심으로 다양한 기업의 세무·회계 업무를 수행해 왔습니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>단순한 신고 업무를 넘어, 기업의 구조와 거래 흐름을 이해하는 세무의 중요성을 깊이 체감하여 이해하고 있습니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>중소·중견 법인을 중심으로 정기 세무대행, 각종 세무 이슈 대응 또한 지속적으로 수행하고 있으며, 현재도 다수의 개인 및 법인을 대상으로 안정적이고 책임 있는 세무 서비스를 제공하고 있습니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>프랜차이즈 전문대학원(FCMBA)에서의 배움을 통해, 프랜차이즈 본사·가맹사업 구조, 로열티·수수료 체계, 본사와 가맹점 간 거래관계에 대한 경영적 이해를 바탕으로 한 세무 자문을 제공하고 있습니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span>></span>기업의 숫자를 처리하는 세무사가 아니라, 기업의 의사결정을 함께 고민하는 세무 파트너로서 신뢰할 수 있는 세무 서비스를 제공하겠습니다.<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"margin-top:20px;color:#666;font-size:.88rem"</span>></span>감사합니다.<span class="hljs-tag"><<span class="hljs-name">br</span>></span>지승세무회계 대표세무사 김지현 올림<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"career-box"</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">h4</span>></span>약 력<span class="hljs-tag"></<span class="hljs-name">h4</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">ul</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>지승세무회계 대표세무사<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>한국외국어대학교 국제통상(구:무역)학과 졸업<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>세종대학교 FCMBA 석사<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>세무사 자격증 취득, 서울지방세무사회 감리위원<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>한국세무사 고시회 정회원, 서울시 마을세무사<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>TAXPLUS 조세 연구회 회원<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+            <span class="hljs-tag"><<span class="hljs-name">li</span>></span>(구) 한일세무법인 근무<span class="hljs-tag"></<span class="hljs-name">li</span>></span>
+          <span class="hljs-tag"></<span class="hljs-name">ul</span>></span>
+        <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">section</span>></span>
+
+<span class="hljs-tag"><<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"location"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-inner"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-label"</span>></span>LOCATION<span class="hljs-tag"></<span class="hljs-name">p</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section-title"</span>></span>오시는 길<span class="hljs-tag"></<span class="hljs-name">h2</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider"</span>></span><span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"location-grid"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"map-wrap"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://maps.google.com/maps?q=서울+강남구+삼성로108길+19&output=embed"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100%"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"400"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border:0;"</span> <span class="hljs-attr">allowfullscreen</span>=<span class="hljs-string">""</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">"lazy"</span>></span><span class="hljs-tag"></<span class="hljs-name">iframe</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"location-info"</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">h3</span>></span>지승세무회계<span class="hljs-tag"></<span class="hljs-name">h3</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-row"</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-icon"</span>></span>📍<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-text"</span>></span><span class="hljs-tag"><<span class="hljs-name">strong</span>></span>주소<span class="hljs-tag"></<span class="hljs-name">strong</span>></span><span class="hljs-tag"><<span class="hljs-name">br</span>></span>서울특별시 강남구 삼성로108길 19<span class="hljs-tag"><<span class="hljs-name">br</span>></span>태형빌딩 3층<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-row"</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-icon"</span>></span>📞<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-text"</span>></span><span class="hljs-tag"><<span class="hljs-name">strong</span>></span>대표전화<span class="hljs-tag"></<span class="hljs-name">strong</span>></span><span class="hljs-tag"><<span class="hljs-name">br</span>></span>02-6959-6313<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-row"</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-icon"</span>></span>📱<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-text"</span>></span><span class="hljs-tag"><<span class="hljs-name">strong</span>></span>휴대폰<span class="hljs-tag"></<span class="hljs-name">strong</span>></span><span class="hljs-tag"><<span class="hljs-name">br</span>></span>010-6862-6316<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-row"</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-icon"</span>></span>🕐<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+          <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"info-text"</span>></span><span class="hljs-tag"><<span class="hljs-name">strong</span>></span>업무시간<span class="hljs-tag"></<span class="hljs-name">strong</span>></span><span class="hljs-tag"><<span class="hljs-name">br</span>></span>평일 09:00 – 18:00<span class="hljs-tag"><<span class="hljs-name">br</span>></span>토·일·공휴일 휴무<span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+        <span class="hljs-tag"><<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://maps.google.com/?q=서울+강남구+삼성로108길+19"</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_blank"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn-gold"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"margin-top:24px;display:inline-block;font-size:.88rem;padding:12px 28px"</span>></span>지도에서 보기<span class="hljs-tag"></<span class="hljs-name">a</span>></span>
+      <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+    <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">div</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">section</span>></span>
+
+<span class="hljs-tag"><<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contact"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">c</span>
+<span class="hljs-attr">...</span>(<span class="hljs-attr">truncated</span>)<span class="hljs-attr">...</span></span>
